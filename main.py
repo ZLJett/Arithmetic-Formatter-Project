@@ -1,5 +1,8 @@
 # put help statment here
 
+# import for testing
+import pytest
+# imports for code
 import operator
 
 def arithmetic_arranger(problems, solve=False):
@@ -75,9 +78,6 @@ def arithmetic_arranger(problems, solve=False):
    
 
 if __name__ == "__main__":
-  test_items_list = [(['3801 - 2', '123 + 49'],), (['44 + 815', '909 - 2', '45 + 43', '123 + 49', '888 + 40', '653 + 87'],), (['3 / 855', '3801 - 2', '45 + 43', '123 + 49'],), (['24 + 85215', '3801 - 2', '45 + 43', '123 + 49'],), (['98 + 3g5', '3801 - 2', '45 + 43', '123 + 49'],), (['3 + 855', '988 + 40'], True), (['32 - 698', '1 - 3801', '45 + 43', '123 + 49', '988 + 40'], True)]
-  test_item_number = 0
-  for test_item in test_items_list:
-    test_item_number += 1
-    print("Test Item" + str(test_item_number) + ":")
-    print(arithmetic_arranger(*test_item) + "\n")
+  # testing is copied from freeCodeCamp test code for this project
+  print(arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"]))
+  pytest.main()
